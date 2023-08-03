@@ -1,22 +1,30 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
-
 @layer components {
+  .wrapper {
+    @apply px-[48px];
+  }
 
-    .wrapper {
-        @apply px-[48px]
-    }
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
 
-    .flex-center {
-        @apply flex justify-center items-center
-    }
+  #auth-input.active {
+    @apply !bg-[#fff] border-[2px] border-color-3 text-color-3;
+  }
+
+  #auth-input.active input::placeholder {
+    @apply text-color-3;
+  }
+
+  #auth-input {
+    @apply transition-all border-[2px] border-[#f5f5f5] flex w-full justify-between items-center px-[20px] h-[60px] bg-[#f5f5f5] rounded-[14px];
+  }
+  
 }
-
 
 /* @layer components {
     .container {
@@ -24,11 +32,10 @@
     }
 } */
 
-
 .poppins {
-    font-family: 'Poppins' ;
+  font-family: "Poppins";
 }
 
 .manrope {
-    font-family: 'Manrope';
+  font-family: "Manrope";
 }
