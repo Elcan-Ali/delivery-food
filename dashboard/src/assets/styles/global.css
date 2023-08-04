@@ -15,6 +15,12 @@
   #auth-input.active {
     @apply !bg-[#fff] border-[2px] border-color-3 text-color-3;
   }
+  #auth-input.error {
+    @apply !bg-[#fff] border-[2px] border-red-600 text-red-600;
+  }
+  #auth-input.error input::placeholder {
+    @apply text-red-600;
+  }
 
   #auth-input.active input::placeholder {
     @apply text-color-3;
@@ -23,7 +29,6 @@
   #auth-input {
     @apply transition-all border-[2px] border-[#f5f5f5] flex w-full justify-between items-center px-[20px] h-[60px] bg-[#f5f5f5] rounded-[14px];
   }
-  
 }
 
 /* @layer components {

@@ -5,7 +5,7 @@ import AuthPanel from "../../components/organism/AuthPanel";
 
 function AuthLayout() {
   return (
-    <div className="flex flex-col lg:flex-row items-start">
+    <div className='flex flex-col lg:flex-row items-start'>
       <AuthPageWrapper page={<Outlet />} />
       <AuthPanel />
     </div>

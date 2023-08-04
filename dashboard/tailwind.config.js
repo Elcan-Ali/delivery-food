@@ -8,7 +8,6 @@ export default {
         "color-2": "#ACADB9",
         "color-3": "#6C5FBC",
         "color-4": "#323142",
-
       },
       screens: {
         sm: "576px",
