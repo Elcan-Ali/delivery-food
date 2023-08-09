@@ -40,8 +40,21 @@
   .main-menu-items {
     @apply w-[100%] rounded-[12px] flex items-center p-[16px] gap-[10px];
   }
+
   .main-menu-items.active {
     @apply bg-color-3 rounded-[12px] flex items-center p-[16px] text-white;
+  }
+
+  .main-search-query {
+    @apply h-[40px] w-[120px] flex-center text-color-3
+  }
+
+  .main-search-query.active {
+    @apply h-[40px] w-[120px] flex-center bg-color-3 text-white
+  }
+  #dashboard-content::-webkit-scrollbar{
+    appearance: none;
+    width: 0;
   }
 }
 

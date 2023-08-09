@@ -6,7 +6,7 @@ function MainLayout() {
   return (
     <div className='flex min-h-[100vh]'>
       <MainMenu />
-      <main className='pt-[32px] px-[40px]'>
+      <main className='pt-[26px] px-[70px] w-[calc(100%-260px)]'>
         <Outlet />
       </main>
     </div>

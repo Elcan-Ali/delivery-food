@@ -5,12 +5,12 @@ function AuthPageWrapper({ page }) {
   return (
     <div
       id='auth-page-wrapper'
-      className='border-r wrapper poppins w-full lg:w-3/5 h-[100vh] overflow-auto  py-[32px]   px-[48px] flex flex-col justify-between'
+      className='border-r wrapper poppins w-full lg:w-3/5 h-[100vh] overflow-auto  py-[26px]   px-[48px] flex flex-col justify-between'
     >
       <header className='bg-[#fff]'>
         <LogoIcon />
       </header>
-      <main className='pt-[30px]'>{page}</main>
+      <main className='pt-[20px]'>{page}</main>
       <footer>
         <div className='flex w-full justify-between'>
           <span className='text-[14px] text-color-1 '>Privacy Policy</span>

@@ -6,7 +6,7 @@ function MainMenuItem({ icon, activeIcon, text, link }) {
   const path = location.pathname === link;
 
   return (
-    <NavLink className='main-menu-items' to={link}>
+    <NavLink className='main-menu-items font-medium' to={link}>
       <img src={path ? activeIcon : icon} alt='menu-items-icon' />
       <p>{text}</p>
     </NavLink>

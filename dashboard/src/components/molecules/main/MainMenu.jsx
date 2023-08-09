@@ -7,7 +7,7 @@ import { nanoid } from "@reduxjs/toolkit";
 
 function MainMenu() {
   return (
-    <div id='main-navbar' className='py-[32px] w-[260px] px-[24px] bg-[#f9f9f9] manrope'>
+    <div id='main-navbar' className='py-[26px] w-[260px] px-[24px] bg-[#f9f9f9] manrope'>
       <header>
         <div className='flex items-center gap-[10px] border-b pb-[20px] px-[16px]'>
           <AuthLogoIcon />
