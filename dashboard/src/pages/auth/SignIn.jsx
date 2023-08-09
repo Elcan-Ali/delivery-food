@@ -1,6 +1,7 @@
 import React from "react";
 import AuthForm from "../../components/organism/AuthForm";
-import { SingInInputs, initialStateSingUp } from "../../const/authForm";
+import { SingInInputs, initialStateSingIn } from "../../const/authForm";
+import { Link } from "react-router-dom";
 
 function SignIn() {
   return (
@@ -10,8 +11,8 @@ function SignIn() {
         elements={SingInInputs}
         buttonText={"Sign In"}
         helperText={"Create A New Account?"}
-        helperLink={"Sign Up"}
-        initialState={initialStateSingUp}
+        helperLink={<Link to="/auth/register">Sign Up</Link>}
+        initialState={initialStateSingIn}
       />
     </section>
   );

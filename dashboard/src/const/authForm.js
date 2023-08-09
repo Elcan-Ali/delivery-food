@@ -25,8 +25,42 @@ export const SingInInputs = [
     errorMessage: "Password must be at least 6 characters",
   },
 ];
+export const SingUpInputs = [
+  {
+    icon: AuthEmail,
+    activeIcon: AuthEmailActive,
+    errorIcon: AuthEmailError,
+    name: "fullname",
+    type: "text",
+    placeholder: "fullname",
+    errorMessage: "Fullname is invalid",
+  },
+  {
+    icon: AuthEmail,
+    activeIcon: AuthEmailActive,
+    errorIcon: AuthEmailError,
+    name: "email",
+    type: "email",
+    placeholder: "email",
+    errorMessage: "There is no such user",
+  },
+  {
+    icon: AuthPassword,
+    activeIcon: AuthPasswordActive,
+    errorIcon: AuthPasswordError,
+    name: "password",
+    type: "password",
+    placeholder: "password",
+    errorMessage: "Password must be at least 6 characters",
+  },
+];
 
+export const initialStateSingIn = {
+  email: "",
+  password: "",
+};
 export const initialStateSingUp = {
+  fullname: "",
   email: "",
   password: "",
 };

@@ -10,10 +10,14 @@ import GoogleIcon from "../../assets/img/auth-google.png";
 function AuthForm({ title, elements, buttonText, helperText, helperLink, initialState }) {
   const [form, setForm] = useState(initialState);
 
+
   const formHandler = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
+    e.preventDefault()
+    const inputs = document.querySelectorAll("input")
+    const values = Object.fromEntries([...inputs].map(item => [item.name, item.value]));
+    setForm(values)
   };
-  console.log(form);
+
 
   return (
     <div className='w-[382px] text-center'>
@@ -25,23 +29,17 @@ function AuthForm({ title, elements, buttonText, helperText, helperLink, initial
       <span className='block uppercase text-[#32314259] font-medium text-[20px] my-[20px]'>
         or
       </span>
-      <form className='flex-center flex-col'>
-        <div className='flex flex-col gap-[30px]  w-full'>
+      <form onSubmit={formHandler} className='flex-center flex-col'>
+        <div className='flex flex-col gap-[30px]  mb-[10px] w-full'>
           {elements.map((item) => (
             <AuthInput
               key={nanoid()}
               {...item}
               value={form[item.name]}
-              formHandler={formHandler}
             />
           ))}
         </div>
-        {buttonText === "Sign In" && (
-          <p className='text-right w-full mt-[24px] text-[15px] text-color-3'>
-            Forget Password ?
-          </p>
-        )}
-        <AuthButton>{buttonText}</AuthButton>
+        <AuthButton >{buttonText}</AuthButton>
         <p className='text-[16px] tracking-[.3px] mt-[20px]'>
           {helperText} <span className='text-color-3 font-bold'>{helperLink}</span>
         </p>
