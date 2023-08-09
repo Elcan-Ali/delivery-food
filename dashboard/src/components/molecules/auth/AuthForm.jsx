@@ -1,23 +1,21 @@
 import React, { useState } from "react";
-import AuthInput from "../atoms/auth/AuthInput";
+import AuthInput from "../../atoms/auth/AuthInput";
 import { nanoid } from "@reduxjs/toolkit";
-import AuthButton from "../atoms/auth/AuthButton";
-import AuthTitle from "../atoms/auth/AuthTitle";
-import AuthSocial from "../atoms/auth/AuthSocial";
-import AppleIcon from "../../assets/img/auth-apple.svg";
-import GoogleIcon from "../../assets/img/auth-google.png";
+import AuthButton from "../../atoms/auth/AuthButton";
+import AuthTitle from "../../atoms/auth/AuthTitle";
+import AuthSocial from "../../atoms/auth/AuthSocial";
+import AppleIcon from "../../../assets/img/auth-apple.svg";
+import GoogleIcon from "../../../assets/img/auth-google.png";
 
 function AuthForm({ title, elements, buttonText, helperText, helperLink, initialState }) {
   const [form, setForm] = useState(initialState);
 
-
   const formHandler = (e) => {
-    e.preventDefault()
-    const inputs = document.querySelectorAll("input")
-    const values = Object.fromEntries([...inputs].map(item => [item.name, item.value]));
-    setForm(values)
+    e.preventDefault();
+    const inputs = document.querySelectorAll("input");
+    const values = Object.fromEntries([...inputs].map((item) => [item.name, item.value]));
+    setForm(values);
   };
-
 
   return (
     <div className='w-[382px] text-center'>
@@ -32,14 +30,10 @@ function AuthForm({ title, elements, buttonText, helperText, helperLink, initial
       <form onSubmit={formHandler} className='flex-center flex-col'>
         <div className='flex flex-col gap-[30px]  mb-[10px] w-full'>
           {elements.map((item) => (
-            <AuthInput
-              key={nanoid()}
-              {...item}
-              value={form[item.name]}
-            />
+            <AuthInput key={nanoid()} {...item} value={form[item.name]} />
           ))}
         </div>
-        <AuthButton >{buttonText}</AuthButton>
+        <AuthButton>{buttonText}</AuthButton>
         <p className='text-[16px] tracking-[.3px] mt-[20px]'>
           {helperText} <span className='text-color-3 font-bold'>{helperLink}</span>
         </p>

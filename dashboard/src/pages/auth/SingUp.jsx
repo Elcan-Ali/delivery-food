@@ -1,7 +1,7 @@
 import React from "react";
-import AuthForm from "../../components/organism/AuthForm";
-import {SingUpInputs, initialStateSingUp } from "../../const/authForm";
+import { SingUpInputs, initialStateSingUp } from "../../const/authForm";
 import { Link } from "react-router-dom";
+import AuthForm from "../../components/molecules/auth/AuthForm";
 
 function SignUp() {
   return (
@@ -11,8 +11,7 @@ function SignUp() {
         elements={SingUpInputs}
         buttonText={"Sign Up"}
         helperText={"Already Have An Account?"}
-        helperLink={<Link to="/auth/login">Log In</Link>}
-
+        helperLink={<Link to='/auth/login'>Log In</Link>}
         initialState={initialStateSingUp}
       />
     </section>

@@ -1,12 +1,11 @@
 import React from "react";
-import FoodImage from "../../assets/img/food-image.svg";
-import AuthPanelSquares from "../../assets/img/auth-panel-square.svg";
-import HalfDisc from "../../assets/img/half-disc.svg";
-import AuthChart from "../../assets/img/auth-chart.png";
-
-import XMiddle from "../../assets/img/x-middle.svg";
-import XSmall from "../../assets/img/x-small.svg";
-import AuthPanelMeal from "../atoms/auth/AuthPanelMeal";
+import FoodImage from "../../../assets/img/food-image.svg";
+import AuthPanelSquares from "../../../assets/img/auth-panel-square.svg";
+import HalfDisc from "../../../assets/img/half-disc.svg";
+import AuthChart from "../../../assets/img/auth-chart.png";
+import XMiddle from "../../../assets/img/x-middle.svg";
+import XSmall from "../../../assets/img/x-small.svg";
+import AuthPanelMeal from "../../atoms/auth/AuthPanelMeal";
 
 function AuthPanel() {
   return (

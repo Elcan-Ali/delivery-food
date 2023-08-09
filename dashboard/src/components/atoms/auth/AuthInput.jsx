@@ -45,7 +45,7 @@ function AuthInput({
           type={type}
         />
       </div>
-     
+
       {error && (
         <span className='absolute left-0 text-[12px] text-red-600 -bottom-[22px]'>
           {errorMessage}

@@ -1,5 +1,5 @@
 import React from "react";
-import AuthLogoIcon from "../atoms/AuthLogoIcon";
+import LogoIcon from "../../atoms/LogoIcon";
 import "./AuthPageWrapper.css";
 function AuthPageWrapper({ page }) {
   return (
@@ -8,7 +8,7 @@ function AuthPageWrapper({ page }) {
       className='border-r wrapper poppins w-full lg:w-3/5 h-[100vh] overflow-auto  py-[32px]   px-[48px] flex flex-col justify-between'
     >
       <header className='bg-[#fff]'>
-        <AuthLogoIcon />
+        <LogoIcon />
       </header>
       <main className='pt-[30px]'>{page}</main>
       <footer>
