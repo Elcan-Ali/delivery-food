@@ -1,13 +1,8 @@
 const { DataTypes } = require('sequelize')
 const sequelize = require('../db/db')
+const { Meals } = require('../data/dummy-data')
 
 const MealSchema = sequelize.define("meals", {
-    id: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        primaryKey: true,
-        unique: true
-    },
     name: {
         type: DataTypes.STRING,
         allowNull: false,
@@ -18,7 +13,7 @@ const MealSchema = sequelize.define("meals", {
     },
     img: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
     },
     price: {
         type: DataTypes.STRING,
@@ -32,6 +27,10 @@ const MealSchema = sequelize.define("meals", {
         type: DataTypes.STRING,
         allowNull: false,
     },
+    slugName: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
     restaurantId: {
         type: DataTypes.INTEGER,
         allowNull: false
@@ -39,7 +38,8 @@ const MealSchema = sequelize.define("meals", {
 })
 
 const sync = async () => {
-    await MealSchema.sync()
+    await MealSchema.sync({ force: true })
+    await MealSchema.bulkCreate(Meals)
     console.log("MealSchema is sync");
 }
 sync()

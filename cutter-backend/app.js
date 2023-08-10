@@ -1,10 +1,9 @@
 require('dotenv').config()
 const express = require('express')
+const MealsRouter = require('./routes/main/Meals')
 const app = express()
 
-
-
-
+app.use("/meals", MealsRouter)
 
 
 
