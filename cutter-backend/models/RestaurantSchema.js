@@ -2,13 +2,12 @@ const { DataTypes } = require('sequelize')
 const sequelize = require('../db/db')
 
 const RestaurantSchema = sequelize.define("restaurants", {
-    id: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        primaryKey: true,
-        unique: true
-    },
+
     name: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+    slugName: {
         type: DataTypes.STRING,
         allowNull: false,
     },
@@ -24,7 +23,11 @@ const RestaurantSchema = sequelize.define("restaurants", {
         type: DataTypes.STRING,
         allowNull: false,
     },
-    time: {
+    openTime: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+    closeTime: {
         type: DataTypes.STRING,
         allowNull: false,
     }
