@@ -58,11 +58,6 @@
   }
 }
 
-/* @layer components {
-    .container {
-        @apply px-4 mx-auto
-    }
-} */
 
 .poppins {
   font-family: "Poppins";
