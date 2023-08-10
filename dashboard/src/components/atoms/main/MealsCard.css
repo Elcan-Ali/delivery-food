@@ -1,0 +1,4 @@
+.meal-card {
+    width: calc((100% - 78px) / 4);
+    box-shadow: 5px 10px 32px 0px #e5e5e5b3;
+}

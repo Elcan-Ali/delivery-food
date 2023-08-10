@@ -7,6 +7,7 @@ import Dashboard from "../pages/main/Dashboard";
 import Orders from "../pages/main/Orders";
 import LayoutWrapper from "../components/atoms/LayoutWrapper";
 import Activity from "../pages/main/Activity";
+import MealDetail from "../pages/main/MealDetail";
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
@@ -16,6 +17,7 @@ export const router = createBrowserRouter(
           <Route path='dashboard' element={<Dashboard />} />
           <Route path='orders' element={<Orders />} />
           <Route path='activity' element={<Activity />} />
+          <Route path='meal/:slug' element={<MealDetail />} />
         </Route>
 
         <Route path='/auth' element={<AuthLayout />}>
