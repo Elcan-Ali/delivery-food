@@ -1,11 +1,20 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import MainHeader from "../../components/molecules/main/MainHeader";
 import MainSearch from "../../components/atoms/main/MainSearch";
+
 import MainSearchAnything from "../../components/atoms/main/MainSearchAnything";
+import getMeals from "../../services/getMeals";
 
 function Dashboard() {
     const [active, setActive] = useState(true)
     const isActive = (arg) => arg === "food" ? setActive(true) : setActive(false)
+
+    useEffect(() => {
+        (async () => {
+            console.log(await getMeals());
+        })()
+    }, [])
+
     return (
         <div>
             <div className="fixed top-[26px] bg-white w-[calc(100%-400px)]">
@@ -19,7 +28,8 @@ function Dashboard() {
                         <div onClick={() => isActive("restaurant")} className={`main-search-query ${!active && "active"}`}>Restaurant</div>
                     </div>
                 </div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae aut amet expedita rem recusandae numquam doloribus, iste esse eius sit exercitationem. Hic fugit itaque, quod earum delectus adipisci repellat eius culpa. Non modi laborum delectus, nobis quisquam obcaecati praesentium ipsum neque dicta blanditiis quo voluptatum illo explicabo? Neque, facere suscipit repellendus nulla veritatis reiciendis aliquam totam explicabo vitae perspiciatis facilis veniam recusandae, sint eaque ipsa praesentium voluptates necessitatibus. Animi, ullam ea? Corporis quisquam delectus vitae rem similique itaque accusamus eius? Nobis voluptatem dolorem autem assumenda facere aspernatur, rem reprehenderit aperiam at iste voluptas numquam nostrum cum est minima voluptate. Molestiae.</p>
+                {/* <MainSearchAnything /> */}
+
             </div>
         </div>
     );
