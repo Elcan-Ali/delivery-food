@@ -1,9 +1,9 @@
-import axios from "axios"
+import axios from "axios";
 
 const Api = axios.create({
-    baseURL: 'http://localhost:3000',
-    timeout: 2000,
-    headers: { "Content-Type": "application/json" }
-})
+  baseURL: "http://localhost:3000",
+  timeout: 2000,
+  headers: { "Content-Type": "application/json" },
+});
 
-export default Api
+export default Api;

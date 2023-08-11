@@ -3,9 +3,8 @@ import { mainApiSlice } from "./slices/mainApiSlice";
 
 export const store = configureStore({
   reducer: {
-    [mainApiSlice.name]: mainApiSlice.reducer
+    [mainApiSlice.name]: mainApiSlice.reducer,
   },
 });
 
-
-export {Init} from "./slices/mainApiSlice"
+export { Init } from "./slices/mainApiSlice";
